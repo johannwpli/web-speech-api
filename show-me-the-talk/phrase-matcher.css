@@ -4,12 +4,16 @@ body, html {
 
 html {
   height: 100%;
-  //background-color: teal;
+  /* background-color: teal; */
 }
 
 body {
   height: inherit;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+h1 {
+  font-size: 24px;
 }
 
 h1, p {
@@ -18,14 +22,14 @@ h1, p {
 }
 
 div p {
-  //padding: 20px;
+  /* padding: 20px; */
   background-color: rgba(0,0,0,0.2);
 }
 
 div {
   overflow: auto;
-  //position: absolute;
-  //bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   right: 0;
   left: 0;
 }
