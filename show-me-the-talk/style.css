@@ -7,30 +7,38 @@ html {
 }
 
 body {
+  height: inherit;
   height: 90%;
   max-width: 800px;
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 24px;
+}
+
 h1, p {
   font-family: sans-serif;
   text-align: center;
-  /* padding: 20px; */
 }
 
-.txt, select, form > div {
-  display: block;
+div p {
+  background-color: rgba(0,0,0,0.2);
+}
+
+div {
+  overflow: auto;
+  right: 0;
+  left: 0;
+}
+
+button {
   margin: 0 auto;
-  font-family: sans-serif;
-  font-size: 16px;
-  /* padding: 5px; */
-}
-
-.txt {
-  width: 90%;
-  height: 60px;
-  border: 1px solid #f2f2f2;
-  border-radius: 5px;
+  display: block;
+  font-size: 1.1rem;
+  width: 170px;
+  line-height: 2;
+  border-radius: 20px;
 }
 
 select {
@@ -41,6 +49,40 @@ form > div {
   width: 81%;
 }
 
+label {
+  float: left;
+  width: 10%;
+  line-height: 1.5;
+}
+
+@media all and (max-height: 410px) {
+  div {
+    position: static;
+  }
+}
+
+.phrase {
+  font-weight: bold;
+}
+
+.output {
+  font-style: italic;
+}
+
+.txt, select, form > div {
+  display: block;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.txt {
+  width: 90%;
+  height: 60px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+}
+
 .txt, form > div {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -49,12 +91,6 @@ form > div {
 
 .clearfix {
   clear: both;
-}
-
-label {
-  float: left;
-  width: 10%;
-  line-height: 1.5;
 }
 
 .rate-value, .pitch-value {
@@ -71,8 +107,4 @@ label {
 .controls {
   text-align: center;
   margin-top: 10px;
-}
-
-.controls button {
-  /* padding: 10px; */
-}
+} 
