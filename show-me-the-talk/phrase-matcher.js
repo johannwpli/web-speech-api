@@ -15,15 +15,15 @@ var phrasePara = document.querySelector('.phrase');
 var resultPara = document.querySelector('.result');
 var diagnosticPara = document.querySelector('.output');
 
-//var testBtn = document.querySelector('button');
 var testBtn = document.querySelector('#test'); // Johann
+var recoBtn = document.querySelector('#reco'); // Johann
 
 function randomPhrase() {
   var number = Math.floor(Math.random() * phrases.length);
   return number;
 }
 
-function testSpeech() {
+function testSpeechSet() {
   testBtn.disabled = true;
   testBtn.textContent = 'Test in progress';
 
@@ -35,7 +35,10 @@ function testSpeech() {
   resultPara.textContent = 'Right or wrong?';
   resultPara.style.background = 'rgba(0,0,0,0.2)';
   diagnosticPara.textContent = '...diagnostic messages';
+}
 
+function testSpeechGet() {
+  var phrase = document.getElementById("text").value; // Johann
   var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase +';';
   var recognition = new SpeechRecognition();
   var speechRecognitionList = new SpeechGrammarList();
@@ -121,4 +124,5 @@ function testSpeech() {
   }
 }
 
-testBtn.addEventListener('click', testSpeech);
+testBtn.addEventListener('click', testSpeechSet);
+recoBtn.addEventListener('click', testSpeechGet);

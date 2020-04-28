@@ -51,6 +51,7 @@ function speak(){
         return;
     }
     if (inputTxt.value !== '') {
+    console.log(inputTxt.value); // Johann
     var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
     utterThis.onend = function (event) {
         console.log('SpeechSynthesisUtterance.onend');
