@@ -75,12 +75,12 @@ function testSpeechGet() {
   recognition.onspeechend = function() {
     recognition.stop();
     testBtn.disabled = false;
-    testBtn.textContent = 'Start new test';
+    testBtn.textContent = 'New test';
   }
 
   recognition.onerror = function(event) {
     testBtn.disabled = false;
-    testBtn.textContent = 'Start new test';
+    testBtn.textContent = 'New test';
     diagnosticPara.textContent = 'Error occurred in recognition: ' + event.error;
   }
   

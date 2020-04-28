@@ -27,6 +27,7 @@ div p {
 }
 
 div {
+  text-align: center;
   overflow: auto;
   right: 0;
   left: 0;
@@ -52,6 +53,13 @@ label {
   float: left;
   width: 10%;
   line-height: 1.5;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
 }
 
 @media all and (max-height: 410px) {
