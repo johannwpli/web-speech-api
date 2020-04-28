@@ -1,6 +1,8 @@
-// html - JavaScript: How to find out if the user browser is Chrome? - Stack Overflow
-// https://stackoverflow.com/questions/4565112/javascript-how-to-find-out-if-the-user-browser-is-chrome/13348618#13348618
-//
+/*
+html - JavaScript: How to find out if the user browser is Chrome? - Stack Overflow
+https://stackoverflow.com/questions/4565112/javascript-how-to-find-out-if-the-user-browser-is-chrome/13348618#13348618
+*/
+
 // please note, 
 // that IE11 now returns undefined again for window.chrome
 // and new Opera 30 outputs true for window.chrome
@@ -17,7 +19,7 @@ var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
 var isIOSChrome = winNav.userAgent.match("CriOS");
 
 if (isIOSChrome) {
-  // console.log('Chrome ready') // is Google Chrome on IOS
+  // is Google Chrome on IOS
 } else if(
   isChromium !== null &&
   typeof isChromium !== "undefined" &&
@@ -25,9 +27,9 @@ if (isIOSChrome) {
   isOpera === false &&
   isIEedge === false
 ) {
-  // console.log('Chrome ready') // is Google Chrome
+  // is Google Chrome
 } else { 
-  // console.log('Chrome NOT ready') // not Google Chrome
-  Swal.fire('Please use Chrome to play') // fire SweetAlert2 by Johann
+  // not Google Chrome
+  Swal.fire('Please use Chrome to continue') // fire SweetAlert2
 }
 

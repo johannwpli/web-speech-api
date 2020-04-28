@@ -1,14 +1,9 @@
-body, html {
-  margin: 0;
-}
-
 html {
   height: 100%;
+  text-align: center;
 }
 
 body {
-  height: inherit;
-  height: 90%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -17,20 +12,12 @@ h1 {
   font-size: 24px;
 }
 
-h1, p {
-  font-family: sans-serif;
-  text-align: center;
-}
-
 div p {
   background-color: rgba(0,0,0,0.2);
 }
 
 div {
-  text-align: center;
   overflow: auto;
-  right: 0;
-  left: 0;
 }
 
 button {
@@ -79,7 +66,6 @@ a {
 .txt, select, form > div {
   display: block;
   margin: 0 auto;
-  font-family: sans-serif;
   font-size: 16px;
 }
 
@@ -110,8 +96,3 @@ a {
   float: right;
   width: 77%;
 }
-
-.controls {
-  text-align: center;
-  margin-top: 10px;
-} 
