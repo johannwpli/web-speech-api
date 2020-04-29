@@ -33,3 +33,13 @@ if (isIOSChrome) {
   Swal.fire('Please use Chrome to continue') // fire SweetAlert2
 }
 
+
+/* click icon to show info by Johann */
+
+var infoIcn = document.querySelector('#info');
+
+function showInfo() {
+  Swal.fire('click New test or input text in the box to start') // fire SweetAlert2
+}
+
+infoIcn.addEventListener('click', showInfo);
