@@ -39,7 +39,10 @@ if (isIOSChrome) {
 var infoIcn = document.querySelector('#info');
 
 function showInfo() {
-  Swal.fire('click New test or input text in the box to start') // fire SweetAlert2
+  Swal.fire({
+    title: 'click New test or input text in the box to start',
+    timer: 2000,
+  })
 }
 
 infoIcn.addEventListener('click', showInfo);

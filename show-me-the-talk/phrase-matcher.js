@@ -68,6 +68,10 @@ function testSpeechGet() {
     if(speechResult === phrase) {
       resultPara.textContent = 'I heard the correct phrase!';
       resultPara.style.background = 'lime';
+      Swal.fire({
+        html: '<iframe width="400" height="300" src="https://www.youtube.com/embed/-4lsg71fquo?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        showConfirmButton: false,
+      }) // show congrats video by Johann
     } else {
       resultPara.textContent = 'That didn\'t sound right.';
       resultPara.style.background = 'red';
