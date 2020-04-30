@@ -31,7 +31,7 @@ if (isIOSChrome) {
   // is Google Chrome
 } else { 
   // not Google Chrome
-  Swal.fire('Please use Chrome to continue') // fire SweetAlert2
+  Swal.fire('plz use Chrome to continue') // fire SweetAlert2
 }
 
 
