@@ -1,48 +1,37 @@
 /*
-Author: Rob W
-Title:  javascript - How to detect Safari, Chrome, IE, Firefox and Opera browser? - Stack Overflow
-Link:   https://stackoverflow.com/a/9851769
+Author: Jonathan Marzullo
+Title:  html - JavaScript: How to find out if the user browser is Chrome? - Stack Overflow
+Link:   https://stackoverflow.com/questions/4565112/javascript-how-to-find-out-if-the-user-browser-is-chrome/13348618#13348618
 */
 
-// Opera 8.0+
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+// please note, 
+// that IE11 now returns undefined again for window.chrome
+// and new Opera 30 outputs true for window.chrome
+// but needs to check if window.opr is not undefined
+// and new IE Edge outputs to true now for window.chrome
+// and if not iOS Chrome check
+// so use the below updated condition
 
-// Firefox 1.0+
-var isFirefox = typeof InstallTrigger !== 'undefined';
+var isChromium = window.chrome;
+var winNav = window.navigator;
+var vendorName = winNav.vendor;
+var isOpera = typeof window.opr !== "undefined";
+var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+var isIOSChrome = winNav.userAgent.match("CriOS");
 
-// Safari 3.0+ "[object HTMLElementConstructor]" 
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-
-// Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-
-// Edge 20+
-var isEdge = !isIE && !!window.StyleMedia;
-
-// Chrome 1 - 79
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-
-// Edge (based on chromium) detection
-var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
-
-// Blink engine detection
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-var output = 'you\'re using ';
-var browser = '';
-
-if (isFirefox)      { browser = 'Firefox';      }
-if (isSafari)       { browser = 'Safari';       }
-if (isOpera)        { browser = 'Opera';        }
-if (isIE)           { browser = 'IE';           }
-if (isEdge)         { browser = 'Edge';         }
-if (isEdgeChromium) { browser = 'EdgeChromium'; }
-if (isBlink)        { browser = 'Blink';        }
-
-if (browser) {
-  output = output + browser + ' now, plz open Chrome to continue';
-  //console.log(output)
-  Swal.fire(output) // fire SweetAlert2
+if (isIOSChrome) {
+  // is Google Chrome on IOS
+} else if(
+  isChromium !== null &&
+  typeof isChromium !== "undefined" &&
+  vendorName === "Google Inc." &&
+  isOpera === false &&
+  isIEedge === false
+) {
+  // is Google Chrome
+} else { 
+  // not Google Chrome
+  Swal.fire('Please use Chrome to continue') // fire SweetAlert2
 }
 
 
