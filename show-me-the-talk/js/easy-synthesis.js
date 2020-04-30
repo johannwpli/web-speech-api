@@ -19,21 +19,25 @@ function populateVoiceList() {
       else return +1;
   });
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '';
+  voiceSelect.innerHTML = '<option value="" disabled selected>Choose a language you want</option>'; // Johann
   for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
     
+    /* dont know for what
     if(voices[i].default) {
       option.textContent += ' -- DEFAULT';
     }
+    */
 
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);
 
+    /* not working
     if(voices[i].lang === 'en-US') {
-      option.setAttribute('selected', 'selected'); // Johann
+      option.setAttribute('selected', ''); // Johann
     }
+    */
 
     voiceSelect.appendChild(option);
   }
