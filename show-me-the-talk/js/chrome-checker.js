@@ -42,6 +42,7 @@ var infoIcn = document.querySelector('#info');
 function showInfo() {
   Swal.fire({
     title: 'click New test or input text in the box to start',
+    icon: 'question',
     showConfirmButton: false,
     timer: 3000,
   })

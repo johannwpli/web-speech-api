@@ -16,10 +16,6 @@ div p {
   background-color: rgba(0,0,0,0.2);
 }
 
-div {
-  overflow: auto;
-}
-
 button {
   margin: 0 auto;
   font-size: 1.1rem;
@@ -103,6 +99,7 @@ a {
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  font-display: swap;
 }
 
 .material-icons {
