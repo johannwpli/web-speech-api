@@ -19,7 +19,7 @@ function populateVoiceList() {
       else return +1;
   });
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '<option value="" disabled selected>Choose a language you want</option>'; // Johann
+  voiceSelect.innerHTML = '<option value="" disabled selected>pick a language</option>'; // Johann
   for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';

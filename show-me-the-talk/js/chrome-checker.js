@@ -41,10 +41,11 @@ var infoIcn = document.querySelector('#info');
 
 function showInfo() {
   Swal.fire({
-    title: 'click New test or input text in the box to start',
+    title: 'The Echo Method',
     icon: 'question',
+    html: 'First, spend 19 mins to view this video (highly recommended). <div class="video-container"><iframe src="https://www.youtube.com/embed/sQEWEPIHLzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
     showConfirmButton: false,
-    timer: 3000,
+    //timer: 3000,
   })
 }
 
