@@ -19,47 +19,70 @@
   </head>
 
   <body>
-    <h1>Show me the talk <span class="material-icons" id="info">help_outline</span></h1>
 
-    <div class="controls">
-      <button id="test">New test</button>
-      <button id="reco">Recognize voice</button>
+    <div class="row">
+      <div class="col m10 offset-m1 l8 offset-l2">
+        <div class="card">
+
+          <div class="card-action">
+            <span class="card-title">Show me the talk <span class="material-icons" id="info">help_outline</span></span>
+          </div>
+
+          <div class="card-action">
+
+            <div class="controls">
+              <button id="test">New test</button>
+              <button id="reco">Recognize voice</button>
+            </div>
+
+            <form>
+
+              <textarea type="text" class="txt" id="text" placeholder="1. Click 'New test' or input text here.&#x0a;2. Click 'Play sound' to listen.&#x0a;3. Click 'Recognize voice' to speak."></textarea>
+
+              <div class="controls">
+                <button id="play" type="submit">Play sound</button>
+              </div>
+
+              <select>
+
+              </select>
+
+              <div>
+                <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+                <div class="rate-value">1</div>
+                <div class="clearfix"></div>
+              </div>
+
+              <div>
+                <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+                <div class="pitch-value">1</div>
+                <div class="clearfix"></div>
+              </div>
+
+            </form>
+
+            <div>
+              <p class="phrase">Phrase...</p>
+              <p class="result">Right or wrong?</p>
+              <p class="output">...diagnostic messages</p>
+            </div>
+
+            </div>
+
+            <div class="card-action">
+              <a target="_blank" href="https://paint1024.github.io/">
+                <span class="material-icons">face</span>Johann
+              </a>
+            </div>
+
+        </div>
+      </div>
     </div>
 
-    <form>
-    <textarea type="text" class="txt" id="text" placeholder="1. Click 'New test' button or input text here.&#x0a;2. Click 'Play sound' button to listen.&#x0a;3. Click 'Recognize voice' button to speak."></textarea>
-    <div class="controls">
-      <button id="play" type="submit">Play sound</button>
-    </div>
-    <select>
-
-    </select>
-    <div>
-      <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
-      <div class="rate-value">1</div>
-      <div class="clearfix"></div>
-    </div>
-    <div>
-      <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
-      <div class="pitch-value">1</div>
-      <div class="clearfix"></div>
-    </div>
-    </form>
-
-    <div>
-      <p class="phrase">Phrase...</p>
-      <p class="result">Right or wrong?</p>
-      <p class="output">...diagnostic messages</p>
-    </div>
-    <div>
-      <a target="_blank" href="https://paint1024.github.io/">
-        <span class="material-icons">face</span>Johann
-      </a>
-    </div>
-
-    <script src="js/sweetalert2@9.js"></script>
-    <script src="js/chrome-checker.js"></script>
+    <script async src="js/chrome-checker.js"></script>
     <script src="js/phrase-matcher.js"></script>
     <script src="js/easy-synthesis.js"></script>
+    <script defer src="js/sweetalert2@9.js"></script>
+
   </body>
 </html>
