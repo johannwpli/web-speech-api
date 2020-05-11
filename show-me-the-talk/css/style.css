@@ -3,15 +3,14 @@ html {
 }
 
 div p {
-  background-color: rgba(0,0,0,0.2);
+  background: #f2f2f2;
 }
 
 button {
-  margin: 0 auto;
   font-size: 1.1rem;
   width: 170px;
   line-height: 2;
-  border-radius: 20px;
+  border-radius: 1.3rem;
 }
 
 select {
@@ -41,6 +40,10 @@ a {
   }
 }
 
+.row {
+  margin: 10px auto;
+}
+
 .phrase {
   font-weight: bold;
 }
@@ -51,21 +54,24 @@ a {
 
 .txt, select, form > div {
   display: block;
-  margin: 0 auto;
-  font-size: 16px;
+  margin: 10px auto;
+  border-radius: .5rem;
 }
 
 .txt {
   width: 90%;
   height: 5rem;
   border: 1px solid #f2f2f2;
-  border-radius: 5px;
 }
 
-.txt, form > div {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  overflow: auto;
+.txt:hover {
+  border: 1px solid #ffab40;
+  outline: 0px;
+}
+
+.txt:focus {
+  border: 1px solid #ffab40;
+  outline: 0px;
 }
 
 .clearfix {

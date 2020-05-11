@@ -34,14 +34,13 @@ function testSpeechSet() {
   phrasePara.textContent = phrase;
   textAra.value = phrase; // Johann
   resultPara.textContent = 'Right or wrong?';
-  resultPara.style.background = 'rgba(0,0,0,0.2)';
+  //resultPara.style.background = 'rgba(0,0,0,0.2)';
   diagnoPara.textContent = '...diagnostic messages';
 }
 
 function testSpeechGet() {
-  textAra.value = textAra.value.toLowerCase();
-  var phrase = textAra.value; // Johann
-  phrase = phrase.toLowerCase(); // Johann
+  textAra.value = textAra.value || 'please click New test or input text here'; // Johann
+  var phrase = textAra.value.toLowerCase(); // Johann
   phrasePara.textContent = phrase; // Johann
   var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase +';';
   var recognition = new SpeechRecognition();
