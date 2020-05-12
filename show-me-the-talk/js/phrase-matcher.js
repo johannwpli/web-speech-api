@@ -33,15 +33,22 @@ function testSpeechSet() {
   phrase = phrase.toLowerCase();
   phrasePara.textContent = phrase;
   textAra.value = phrase; // Johann
-}
-
-function testSpeechGet() {
-  textAra.value = textAra.value || 'please click New test or input text here'; // Johann
-  var phrase = textAra.value.toLowerCase(); // Johann
-  phrasePara.textContent = phrase; // Johann
   resultPara.textContent = 'Right or wrong?';
   resultPara.style.background = '#f2f2f2'; // Johann
   diagnoPara.textContent = '...diagnostic messages';
+}
+
+function testSpeechGet() {
+  testBtn.disabled = true; // Johann
+  testBtn.textContent = 'Test in progress'; // Johann
+
+  textAra.value = textAra.value || 'please click New test or input text here'; // Johann
+  var phrase = textAra.value.toLowerCase(); // Johann
+  phrasePara.textContent = phrase; // Johann
+  resultPara.textContent = 'Right or wrong?'; // Johann
+  resultPara.style.background = '#f2f2f2'; // Johann
+  diagnoPara.textContent = '...diagnostic messages'; // Johann
+
   var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase +';';
   var recognition = new SpeechRecognition();
   var speechRecognitionList = new SpeechGrammarList();
