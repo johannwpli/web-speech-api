@@ -33,15 +33,15 @@ function testSpeechSet() {
   phrase = phrase.toLowerCase();
   phrasePara.textContent = phrase;
   textAra.value = phrase; // Johann
-  resultPara.textContent = 'Right or wrong?';
-  //resultPara.style.background = 'rgba(0,0,0,0.2)';
-  diagnoPara.textContent = '...diagnostic messages';
 }
 
 function testSpeechGet() {
   textAra.value = textAra.value || 'please click New test or input text here'; // Johann
   var phrase = textAra.value.toLowerCase(); // Johann
   phrasePara.textContent = phrase; // Johann
+  resultPara.textContent = 'Right or wrong?';
+  resultPara.style.background = '#f2f2f2'; // Johann
+  diagnoPara.textContent = '...diagnostic messages';
   var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase +';';
   var recognition = new SpeechRecognition();
   var speechRecognitionList = new SpeechGrammarList();
@@ -70,7 +70,7 @@ function testSpeechGet() {
       Swal.fire({
         html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/-4lsg71fquo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
         showConfirmButton: false,
-      }) // show congrats video by Johann
+      }) // show congrats video, Johann
     } else {
       resultPara.textContent = 'That didn\'t sound right.';
       resultPara.style.background = 'red';
