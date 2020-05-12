@@ -2,6 +2,11 @@ html {
   text-align: center;
 }
 
+body {
+  background: url(../bg.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
 div p {
   background: #f2f2f2;
 }
@@ -44,6 +49,10 @@ a {
   margin: 10px auto;
 }
 
+.card {
+  background: rgba(255, 255, 255, .75);
+}
+
 .phrase {
   font-weight: bold;
 }
@@ -64,14 +73,8 @@ a {
   border: 1px solid #f2f2f2;
 }
 
-.txt:hover {
-  border: 1px solid #ffab40;
-  outline: 0px;
-}
-
 .txt:focus {
-  border: 1px solid #ffab40;
-  outline: 0px;
+  outline: 1px solid #c9f3ef;
 }
 
 .clearfix {
