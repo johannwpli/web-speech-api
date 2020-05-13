@@ -19,7 +19,7 @@ function populateVoiceList() {
       else return +1;
   });
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '<option value="" disabled selected>pick a language</option>'; // Johann
+  voiceSelect.innerHTML = '<option disabled="true">pick a language</option>'; // Johann
   for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
@@ -33,11 +33,10 @@ function populateVoiceList() {
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);
 
-    /* not working
     if(voices[i].lang === 'en-US') {
-      option.setAttribute('selected', ''); // Johann
+      option.setAttribute('selected', 'selected'); // doesn't work, Johann
+      option.setAttribute('id', 'en-US'); // Johann
     }
-    */
 
     voiceSelect.appendChild(option);
   }
@@ -45,6 +44,10 @@ function populateVoiceList() {
 }
 
 populateVoiceList();
+
+//document.getElementById("en-US").selected = true; // Johann
+//document.querySelector('#en-US').selected = true; // Johann
+
 if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
