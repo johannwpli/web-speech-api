@@ -51,11 +51,12 @@ a {
 
 .card {
   background: rgba(255, 255, 255, .7);
-  transition: all .2s linear .1s;
+  transition: all .3s ease-in-out;
 }
 
 .card:hover {
   background: rgba(255, 255, 255, .8);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
 }
 
 .phrase {
