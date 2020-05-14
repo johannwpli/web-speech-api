@@ -19,12 +19,12 @@ function populateVoiceList() {
       else return +1;
   });
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '<option disabled="true">pick a language</option>'; // Johann
+  voiceSelect.innerHTML = '<option value="0" disabled="true">pick a language</option>'; // Johann
   for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
     
-    /* dont know for what
+    /* don't know for what
     if(voices[i].default) {
       option.textContent += ' -- DEFAULT';
     }
@@ -34,7 +34,6 @@ function populateVoiceList() {
     option.setAttribute('data-name', voices[i].name);
 
     if(voices[i].lang === 'en-US') {
-      option.setAttribute('selected', 'selected'); // doesn't work, Johann
       option.setAttribute('id', 'en-US'); // Johann
     }
 
@@ -45,20 +44,21 @@ function populateVoiceList() {
 
 populateVoiceList();
 
-//document.getElementById("en-US").selected = true; // Johann
-//document.querySelector('#en-US').selected = true; // Johann
-
 if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
 function speak(){
+    if (document.querySelector('select').value === '0') {
+      document.querySelector('#en-US').selected = true; // Johann
+    }
+
     if (synth.speaking) {
         console.error('speechSynthesis.speaking');
         return;
     }
     if (inputTxt.value !== '') {
-    console.log(inputTxt.value); // Johann
+    //console.log(inputTxt.value); // Johann
     var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
     utterThis.onend = function (event) {
         console.log('SpeechSynthesisUtterance.onend');
