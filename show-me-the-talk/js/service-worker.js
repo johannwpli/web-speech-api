@@ -20,7 +20,8 @@ self.addEventListener('install', function(event) {
     return cache.put(offlinePage, response);
   });
 }); self.addEventListener('push', function (event) {
-  var data = event.data.json();   var opts = {
+  var data = event.data.json();
+  var opts = {
     body: data.body,
     icon: data.icon,
     data: {
@@ -29,7 +30,9 @@ self.addEventListener('install', function(event) {
   };
   event.waitUntil(self.registration.showNotification(data.title, opts));
 }); self.addEventListener('notificationclick', function(event) {
-  var data = event.notification.data;   event.notification.close();   event.waitUntil(
+  var data = event.notification.data;
+  event.notification.close();
+  event.waitUntil(
     clients.openWindow(data.url)
   );
 });
