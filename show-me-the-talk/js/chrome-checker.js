@@ -31,28 +31,49 @@ if (isIOSChrome) {
   // is Google Chrome
 } else { 
   // not Google Chrome
-  Swal.fire('plz use Chrome to continue') // fire SweetAlert2
+  //Swal.fire('plz use Chrome to continue') // fire SweetAlert2
+  showWeb();
 }
 
 
-/* click icon to show info by Johann */
+/* click icon to show info, Johann */
 
-var infoIcn = document.querySelector('#info');
+var infIcn = document.querySelector('#inf');
+var webIcn = document.querySelector('#web');
+var grpIcn = document.querySelector('#grp');
 
-function showInfo() {
+function showInf() {
   Swal.fire({
     title: 'The Echo Method',
-    icon: 'question',
+    //icon: 'question',
     html: 'First, spend 19 mins to view this video.<br>(highly recommended)<br><br><div class="video-container"><iframe src="https://www.youtube.com/embed/sQEWEPIHLzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
     showConfirmButton: false,
     //timer: 3000,
   })
 }
 
-infoIcn.addEventListener('click', showInfo);
+function showWeb() {
+  Swal.fire({
+    title: 'Web Browser',
+    html: 'Project SMTT uses Google Web Speech API to implement speech synthesis and speech recognition, which means strongly suggested using Google Chrome for browsing. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a>',
+    showConfirmButton: false,
+  })
+}
+
+function showGrp() {
+  Swal.fire({
+    title: 'Team SMTT',
+    html: 'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Program: <a href="https://paint1024.github.io/ target="_blank">Johann</a><br>Schedule: Kobe',
+    showConfirmButton: false,
+  })
+}
+
+infIcn.addEventListener('click', showInf);
+webIcn.addEventListener('click', showWeb);
+grpIcn.addEventListener('click', showGrp);
 
 
-/* PWA by Johann */
+/* PWA, Johann */
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {

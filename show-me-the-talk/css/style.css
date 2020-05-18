@@ -40,10 +40,9 @@ label {
 }
 
 a {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
 }
 
 @media all and (max-height: 410px) {
@@ -64,6 +63,11 @@ a {
 .card:hover {
   background: rgba(255, 255, 255, .8);
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
 }
 
 .phrase {
