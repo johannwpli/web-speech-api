@@ -43,6 +43,7 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 @media all and (max-height: 410px) {
@@ -102,6 +103,10 @@ a {
   float: right;
   width: 9%;
   line-height: 1.5;
+}
+
+#swal2-content > a:after {
+  content: "🔗";
 }
 
 #rate, #pitch {
