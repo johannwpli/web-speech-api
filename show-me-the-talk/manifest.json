@@ -1,7 +1,12 @@
 {
-  "short_name": "SMTT",
   "name": "Show me the talk",
+  "short_name": "SMTT",
+  "display": "standalone",
+  "start_url": "index.html",
   "description": "Johann's web app, derived from MDN Web Speech API on GitHub, for users, to listen and speak English under the shadowing or echo method to enhance self-efficacy and performance.",
+  "scope": ".",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
@@ -13,9 +18,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": "index.html",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "theme_color": "#ffffff"
+  ]
 }
