@@ -63,7 +63,7 @@ function showWeb() {
 function showGrp() {
   Swal.fire({
     title: 'Team SMTT',
-    html: 'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Program: <a href="https://paint1024.github.io/ target="_blank">Johann</a><br>Schedule: Kobe',
+    html: 'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
     showConfirmButton: false,
   })
 }
