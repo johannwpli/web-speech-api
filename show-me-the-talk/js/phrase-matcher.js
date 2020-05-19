@@ -14,6 +14,8 @@ var phrases = [
 var phrasePara = document.querySelector('.phrase');
 var resultPara = document.querySelector('.result');
 var diagnoPara = document.querySelector('.output');
+var heartPara  = document.querySelector('#heart' ); // Johann
+let heartCount = 0; // Johann
 
 var testBtn = document.querySelector('#test'); // Johann
 var recoBtn = document.querySelector('#reco'); // Johann
@@ -74,10 +76,17 @@ function testSpeechGet() {
     if(speechResult === phrase) {
       resultPara.textContent = 'I heard the correct phrase!';
       resultPara.style.background = 'lime';
-      Swal.fire({
-        html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/-4lsg71fquo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
-        showConfirmButton: false,
-      }) // show congrats video, Johann
+
+      heartPara.innerHTML += '❤️'; // Johann
+      heartCount ++; // Johann
+
+      if (heartCount === 6) {
+        Swal.fire({
+          html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/-4lsg71fquo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+          showConfirmButton: false,
+        }) // show congrats video, Johann
+      }
+
     } else {
       resultPara.textContent = 'That didn\'t sound right.';
       resultPara.style.background = 'red';
