@@ -2,7 +2,8 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
-var phrases = [
+let phrase; // Johann
+let phrases = [
   'People who have been exposed to the new coronavirus might practice self-quarantine',
   'This brand-new virus can be transmitted between humans through droplets and contact',
   'Canceling events that are likely to draw crowds is an example of social distancing',
@@ -11,26 +12,33 @@ var phrases = [
   'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world'
 ];
 
-var phrasePara = document.querySelector('.phrase');
-var resultPara = document.querySelector('.result');
-var diagnoPara = document.querySelector('.output');
-var heartPara  = document.querySelector('#heart' ); // Johann
-let heartCount = 0; // Johann
+let phrasePara = document.querySelector('.phrase');
+let resultPara = document.querySelector('.result');
+let diagnoPara = document.querySelector('.output');
 
-var testBtn = document.querySelector('#test'); // Johann
-var recoBtn = document.querySelector('#reco'); // Johann
-var textAra = document.querySelector('#text'); // Johann
+let heartPara  = document.querySelector('#heart' ); // Johann
+let swordPara  = document.querySelector('#sword' ); // Johann
+let armorPara  = document.querySelector('#armor' ); // Johann
+
+let heartCount = 0; // Johann
+let swordCount = 0; // Johann
+let armorCount = 0; // Johann
+
+let testBtn = document.querySelector('#test'); // Johann
+let recoBtn = document.querySelector('#reco'); // Johann
+let textAra = document.querySelector('#text'); // Johann
 
 function randomPhrase() {
-  var number = Math.floor(Math.random() * phrases.length);
+  let number = Math.floor(Math.random() * phrases.length);
   return number;
 }
 
 function testSpeechSet() {
   testBtn.disabled = true;
   testBtn.textContent = 'Test in progress';
+  textAra.disabled = true; // Johann
 
-  var phrase = phrases[randomPhrase()];
+  phrase = phrases[randomPhrase()]; // Johann
   // To ensure case consistency while checking with the returned output text
   phrase = phrase.toLowerCase();
   phrasePara.textContent = phrase;
@@ -45,15 +53,15 @@ function testSpeechGet() {
   testBtn.textContent = 'Test in progress'; // Johann
 
   textAra.value = textAra.value || 'please click New test or input text here'; // Johann
-  var phrase = textAra.value.toLowerCase(); // Johann
+  phrase = textAra.value.toLowerCase(); // Johann
   phrasePara.textContent = phrase; // Johann
   resultPara.textContent = 'Right or wrong?'; // Johann
   resultPara.style.background = '#f2f2f2'; // Johann
   diagnoPara.textContent = '...diagnostic messages'; // Johann
 
-  var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase +';';
-  var recognition = new SpeechRecognition();
-  var speechRecognitionList = new SpeechGrammarList();
+  let grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase +';';
+  let recognition = new SpeechRecognition();
+  let speechRecognitionList = new SpeechGrammarList();
   speechRecognitionList.addFromString(grammar, 1);
   recognition.grammars = speechRecognitionList;
   recognition.lang = 'en-US';
@@ -71,7 +79,7 @@ function testSpeechGet() {
     // These also have getters so they can be accessed like arrays.
     // The second [0] returns the SpeechRecognitionAlternative at position 0.
     // We then return the transcript property of the SpeechRecognitionAlternative object 
-    var speechResult = event.results[0][0].transcript.toLowerCase();
+    let speechResult = event.results[0][0].transcript.toLowerCase();
     diagnoPara.textContent = 'Speech received: ' + speechResult; // Johann
     if(speechResult === phrase) {
       resultPara.textContent = 'I heard the correct phrase!';
@@ -99,11 +107,13 @@ function testSpeechGet() {
     recognition.stop();
     testBtn.disabled = false;
     testBtn.textContent = 'New test';
+    textAra.disabled = false; // Johann
   }
 
   recognition.onerror = function(event) {
     testBtn.disabled = false;
     testBtn.textContent = 'New test';
+    textAra.disabled = false; // Johann
     diagnoPara.textContent = 'Error occurred in recognition: ' + event.error;
   }
   
