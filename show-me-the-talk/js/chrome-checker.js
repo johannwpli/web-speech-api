@@ -32,17 +32,15 @@ if (isIOSChrome) {
 } else { 
   // not Google Chrome
   //Swal.fire('plz use Chrome to continue') // fire SweetAlert2
-  showWeb();
+  showEnv();
 }
 
 
-/* click icon to show info, Johann */
+/* icon to show info, Johann */
 
 var hlpIcn = document.querySelector('#hlp');
 var infIcn = document.querySelector('#inf');
-var scnIcn = document.querySelector('#scn');
-var webIcn = document.querySelector('#web');
-var grpIcn = document.querySelector('#grp');
+var envIcn = document.querySelector('#env');
 
 function showHlp() {
   Swal.fire({
@@ -63,35 +61,22 @@ function showInf() {
   })
 }
 
-function showScn() {
+function showEnv() {
   Swal.fire({
-    title: 'Scan Me',
-    html: '<img src=scan.png>',
-    showConfirmButton: false,
-  })
-}
-
-function showWeb() {
-  Swal.fire({
-    title: 'Web Browser',
-    html: 'Project SMTT uses Google Web Speech API to implement speech synthesis and speech recognition, which means strongly suggested using Google Chrome for browsing. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a>',
-    showConfirmButton: false,
-  })
-}
-
-function showGrp() {
-  Swal.fire({
-    title: 'Team SMTT',
-    html: 'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
+    title: '',
+    html: '<h2 class="swal2-title">Scan Me</h2>' +
+          '<img src=scan.png>' + 
+          '<h2 class="swal2-title">Environment</h2>' + 
+          'SMTT uses Google Web Speech API to implement speech synthesis and speech recognition.<br>Please use Google Chrome for browsing.<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a><p>' +
+          '<h2 class="swal2-title">Team SMTT</h2>' +
+          'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game/Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
     showConfirmButton: false,
   })
 }
 
 hlpIcn.addEventListener('mouseover', showHlp);
 infIcn.addEventListener('mouseover', showInf);
-scnIcn.addEventListener('mouseover', showScn);
-webIcn.addEventListener('mouseover', showWeb);
-grpIcn.addEventListener('mouseover', showGrp);
+envIcn.addEventListener('mouseover', showEnv);
 
 
 /* PWA, Johann */

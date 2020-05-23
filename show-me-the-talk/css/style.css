@@ -107,6 +107,11 @@ a {
   outline: 1px solid #c9f3ef;
 }
 
+
+.materialize-textarea {
+  /* height: auto !important; */
+}
+
 .clearfix {
   clear: both;
 }
