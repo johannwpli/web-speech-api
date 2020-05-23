@@ -40,6 +40,7 @@ if (isIOSChrome) {
 
 var hlpIcn = document.querySelector('#hlp');
 var infIcn = document.querySelector('#inf');
+var scnIcn = document.querySelector('#scn');
 var webIcn = document.querySelector('#web');
 var grpIcn = document.querySelector('#grp');
 
@@ -62,6 +63,14 @@ function showInf() {
   })
 }
 
+function showScn() {
+  Swal.fire({
+    title: 'Scan Me',
+    html: '<img src=scan.png>',
+    showConfirmButton: false,
+  })
+}
+
 function showWeb() {
   Swal.fire({
     title: 'Web Browser',
@@ -78,10 +87,11 @@ function showGrp() {
   })
 }
 
-hlpIcn.addEventListener('click', showHlp);
-infIcn.addEventListener('click', showInf);
-webIcn.addEventListener('click', showWeb);
-grpIcn.addEventListener('click', showGrp);
+hlpIcn.addEventListener('mouseover', showHlp);
+infIcn.addEventListener('mouseover', showInf);
+scnIcn.addEventListener('mouseover', showScn);
+webIcn.addEventListener('mouseover', showWeb);
+grpIcn.addEventListener('mouseover', showGrp);
 
 
 /* PWA, Johann */

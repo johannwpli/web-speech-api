@@ -2,8 +2,8 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
-let phrase; // Johann
-let phrases = [
+var phrase; // Johann
+var phrases = [
   'People who have been exposed to the new coronavirus might practice self-quarantine',
   'This brand-new virus can be transmitted between humans through droplets and contact',
   'Canceling events that are likely to draw crowds is an example of social distancing',

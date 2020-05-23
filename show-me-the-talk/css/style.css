@@ -30,6 +30,7 @@ button {
   width: 10rem;
   line-height: 2;
   border-radius: 1.3rem;
+  white-space: nowrap;
 }
 
 select {
