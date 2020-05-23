@@ -74,9 +74,9 @@ function showEnv() {
   })
 }
 
-hlpIcn.addEventListener('mouseover', showHlp);
-infIcn.addEventListener('mouseover', showInf);
-envIcn.addEventListener('mouseover', showEnv);
+hlpIcn.addEventListener('click', showHlp);
+infIcn.addEventListener('click', showInf);
+envIcn.addEventListener('click', showEnv);
 
 
 /* PWA, Johann */
