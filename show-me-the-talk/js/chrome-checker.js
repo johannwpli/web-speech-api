@@ -67,9 +67,10 @@ function showEnv() {
     html: '<h2 class="swal2-title">Scan Me</h2>' +
           '<img src=scan.png>' + 
           '<h2 class="swal2-title">Environment</h2>' + 
-          'SMTT uses Google Web Speech API to implement speech synthesis and speech recognition.<br>Please use Google Chrome for browsing.<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a><p>' +
+          'Please use Google Chrome to browse.<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a>' +
+          '<p>SMTT uses Google Web Speech API to do speech synthesis and recognition.</p>' +
           '<h2 class="swal2-title">Team SMTT</h2>' +
-          'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game/Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
+          'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
     showConfirmButton: false,
   })
 }
