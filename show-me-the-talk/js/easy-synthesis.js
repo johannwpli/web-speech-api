@@ -1,7 +1,7 @@
 var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('.txt');
+var inputTxt = document.querySelector('#text'); // Johann
 var voiceSelect = document.querySelector('select');
 
 var pitch = document.querySelector('#pitch');
