@@ -53,9 +53,9 @@ function showHlp() {
 
 function showInf() {
   Swal.fire({
-    title: 'The Echo Method',
+    title: 'The Shadowing / Echo Method',
     //icon: 'info',
-    html: 'First, spend 19 mins to view this video.<br>(highly recommended)<br><br><div class="video-container"><iframe src="https://www.youtube.com/embed/sQEWEPIHLzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+    html: 'First, spend 19 mins to view this video.<br>(Highly Recommended)<br><br><div class="video-container"><iframe src="https://www.youtube.com/embed/sQEWEPIHLzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
     showConfirmButton: false,
     //timer: 3000,
   })
@@ -64,13 +64,15 @@ function showInf() {
 function showEnv() {
   Swal.fire({
     title: '',
-    html: '<h2 class="swal2-title">Scan Me</h2>' +
+    html:
+          '<h2 class="swal2-title">Scan Me</h2>' +
           '<img src=scan.png>' + 
           '<h2 class="swal2-title">Environment</h2>' + 
-          'Please use Google Chrome to browse.<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a>' +
-          '<p>SMTT uses Google Web Speech API to do speech synthesis and recognition.</p>' +
-          '<h2 class="swal2-title">Team SMTT</h2>' +
-          'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
+          'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to browse.' +
+          '<p>SMTT uses Google Web Speech API to do speech synthesis and recognition.' +
+          ' <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a></p>' +
+          '<h2 class="swal2-title">Team</h2>' +
+          '<p>Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe</p>',
     showConfirmButton: false,
   })
 }
