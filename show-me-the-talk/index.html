@@ -28,10 +28,13 @@
 
           <div class="card-action card-header">
             <span class="card-title">Show me the talk</span>
+            <br>
             <a id="hlp"><span class="material-icons">help_outline</span>說明</a>
             <a id="inf"><span class="material-icons">info_outline</span>原理</a>
             <br>
             <span id="heart"></span>
+            <span id="sword"></span>
+            <span id="armor"></span>
           </div>
 
           <div class="card-action">
@@ -43,19 +46,22 @@
 
             <form>
 
+              <textarea class="txt" id="text" placeholder="Click 'New test' or input text here to start."></textarea>
               <!--
               <textarea class="txt" id="text" placeholder="1. Click 'New test' or input text here.&#x0a;2. Click 'Play sound' to listen.&#x0a;3. Click 'Recognize voice' to speak."></textarea>
-              //-->
+
               <textarea class="materialize-textarea" id="text"></textarea>
               <label for="text">Input</label>
+              //-->
 
               <div class="controls">
                 <button id="play" type="submit">Play sound</button>
               </div>
 
-              <select>
+              <select id="lngg">
 
               </select>
+              <br>
 
               <div>
                 <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">

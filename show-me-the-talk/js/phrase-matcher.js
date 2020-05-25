@@ -87,6 +87,10 @@ function testSpeechGet() {
 
       heartPara.innerHTML += '❤️'; // Johann
       heartCount ++; // Johann
+      swordPara.innerHTML += '🗡️'; // Johann
+      swordCount ++; // Johann
+      armorPara.innerHTML += '🛡️'; // Johann
+      armorCount ++; // Johann
 
       if (heartCount === 6) {
         Swal.fire({

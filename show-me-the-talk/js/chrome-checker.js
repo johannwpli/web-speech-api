@@ -82,6 +82,16 @@ infIcn.addEventListener('click', showInf);
 envIcn.addEventListener('click', showEnv);
 
 
+/* initialization for materialize, Johann */
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
+*/
+
+
 /* PWA, Johann */
 
 /*
