@@ -44,7 +44,7 @@ var envIcn = document.querySelector('#env');
 
 function showHlp() {
   Swal.fire({
-    title: 'Let\'s Play',
+    title: 'How to Play',
     //icon: 'question',
     html: 'Type 1<br>①  Click \'New test\' to get test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.<br><br>Type 2<br>①  Input text in the form to set test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.',
     showConfirmButton: false,
