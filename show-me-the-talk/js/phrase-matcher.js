@@ -52,7 +52,7 @@ function testSpeechGet() {
   testBtn.disabled = true; // Johann
   testBtn.textContent = 'Test in progress'; // Johann
 
-  textAra.value = textAra.value || 'please click New test or input text here'; // Johann
+  textAra.value = textAra.value || 'Click New test or input text here to start.'; // Johann
   phrase = textAra.value.toLowerCase(); // Johann
   phrasePara.textContent = phrase; // Johann
   resultPara.textContent = 'Right or wrong?'; // Johann
@@ -110,13 +110,13 @@ function testSpeechGet() {
   recognition.onspeechend = function() {
     recognition.stop();
     testBtn.disabled = false;
-    testBtn.textContent = 'New test';
+    testBtn.textContent = '①  New test';
     textAra.disabled = false; // Johann
   }
 
   recognition.onerror = function(event) {
     testBtn.disabled = false;
-    testBtn.textContent = 'New test';
+    testBtn.textContent = '①  New test';
     textAra.disabled = false; // Johann
     diagnoPara.textContent = 'Error occurred in recognition: ' + event.error;
   }
