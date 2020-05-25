@@ -27,7 +27,6 @@ div p {
 
 button {
   font-size: 1.1rem;
-  width: 10rem;
   line-height: 2;
   border-radius: 1.3rem;
   white-space: nowrap;
@@ -85,6 +84,7 @@ a {
 
 .phrase {
   font-weight: bold;
+  display: none;
 }
 
 .output {
@@ -99,14 +99,13 @@ a {
 
 .txt {
   width: 90%;
-  height: 5rem;
+  background-color: rgba(255,255,255,0.9);
   border: 1px solid #f2f2f2;
 }
 
 .txt:focus {
   outline: 1px solid #c9f3ef;
 }
-
 
 .materialize-textarea {
   /* height: auto !important; */

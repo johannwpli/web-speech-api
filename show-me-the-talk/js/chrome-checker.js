@@ -46,7 +46,7 @@ function showHlp() {
   Swal.fire({
     title: 'Let\'s Play',
     //icon: 'question',
-    html: 'Type 1<br>1. Click \'New test\' to get test.<br>2. Click \'Play sound\' to listen.<br>3. Click \'Recognize voice\' to speak.<br><br>Type 2<br>1. Input text in the form to set test.<br>2. Click \'Play sound\' to listen.<br>3. Click \'Recognize voice\' to speak.',
+    html: 'Type 1<br>①  Click \'New test\' to get test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.<br><br>Type 2<br>①  Input text in the form to set test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.',
     showConfirmButton: false,
   })
 }
