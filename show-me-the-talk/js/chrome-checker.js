@@ -41,6 +41,7 @@ if (isIOSChrome) {
 var hlpIcn = document.querySelector('#hlp');
 var infIcn = document.querySelector('#inf');
 var envIcn = document.querySelector('#env');
+var grpIcn = document.querySelector('#grp');
 
 function showHlp() {
   Swal.fire({
@@ -65,14 +66,24 @@ function showEnv() {
   Swal.fire({
     title: '',
     html:
-          '<h2 class="swal2-title">Scan Me</h2>' +
-          '<img src=scan.png>' + 
-          '<h2 class="swal2-title">Environment</h2>' + 
-          'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to browse.' +
-          '<p>SMTT uses Google Web Speech API to do speech synthesis and recognition.' +
-          ' <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a></p>' +
-          '<h2 class="swal2-title">Team</h2>' +
-          '<p>Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe</p>',
+      '<h2 class="swal2-title">Scan Me</h2>' +
+      '<img src=scan.png>' + 
+      '<h2 class="swal2-title">System</h2>' + 
+      'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to browse.' +
+      '<p>SMTT uses Google Web Speech API to do speech synthesis and recognition.' +
+      '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a></p>',
+    showCloseButton: false,
+    showConfirmButton: false,
+  })
+}
+
+function showGrp() {
+  Swal.fire({
+    title: '',
+    html:
+      '<h2 class="swal2-title">Team</h2>' +
+      'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
+    showCloseButton: false,
     showConfirmButton: false,
   })
 }
@@ -80,6 +91,7 @@ function showEnv() {
 hlpIcn.addEventListener('click', showHlp);
 infIcn.addEventListener('click', showInf);
 envIcn.addEventListener('click', showEnv);
+grpIcn.addEventListener('click', showGrp);
 
 
 /* initialization for materialize, Johann */

@@ -73,8 +73,12 @@ a {
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
 }
 
-.card-header > a {
-  margin-right: 0px !important;
+.card-header a {
+  margin: auto 12px !important;
+}
+
+.card-footer a {
+  margin: auto 12px !important;
 }
 
 .card-footer {
