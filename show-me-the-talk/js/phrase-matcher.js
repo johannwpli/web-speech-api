@@ -2,31 +2,35 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
-var phrase; // Johann
-var phrases = [
+let phrase; // Johann
+let phrases = [
   'People who have been exposed to the new coronavirus might practice self-quarantine',
   'This brand-new virus can be transmitted between humans through droplets and contact',
   'Canceling events that are likely to draw crowds is an example of social distancing',
-  'People who contract the coronavirus might spread the disease before symptoms show',
+  'People who contract the coronavirus might spread the disease before symptoms',
   'We could take precautions to prevent infection, such as washing hands regularly',
-  'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world'
+  'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world',
+  'The virus has a long incubation period',
+  'Thousands of people in Spain are protesting against the government’s handling of the coronavirus outbreak',
+  'The country’s two-month lockdown has seen hotels, bars and restaurants all close as well as beaches and other outdoor attractions',
+  'Church officials followed social distancing rules and disinfected the building ahead of the service'
 ];
 
-let phrasePara = document.querySelector('.phrase');
-let resultPara = document.querySelector('.result');
-let diagnoPara = document.querySelector('.output');
+let phrasePara = document.querySelector('.phrase'),
+    resultPara = document.querySelector('.result'),
+    diagnoPara = document.querySelector('.output'),
 
-let heartPara  = document.querySelector('#heart' ); // Johann
-let swordPara  = document.querySelector('#sword' ); // Johann
-let armorPara  = document.querySelector('#armor' ); // Johann
+    heartPara  = document.querySelector('#heart' ), // Johann
+    swordPara  = document.querySelector('#sword' ), // Johann
+    armorPara  = document.querySelector('#armor' ), // Johann
 
-let heartCount = 0; // Johann
-let swordCount = 0; // Johann
-let armorCount = 0; // Johann
+    heartCount = 0, // Johann
+    swordCount = 0, // Johann
+    armorCount = 0, // Johann
 
-let testBtn = document.querySelector('#test'); // Johann
-let recoBtn = document.querySelector('#reco'); // Johann
-let textAra = document.querySelector('#text'); // Johann
+    testBtn    = document.querySelector('#test'  ), // Johann
+    recoBtn    = document.querySelector('#reco'  ), // Johann
+    textAra    = document.querySelector('#text'  ); // Johann
 
 function randomPhrase() {
   let number = Math.floor(Math.random() * phrases.length);
