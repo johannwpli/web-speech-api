@@ -68,7 +68,7 @@ function showEnv() {
     html:
       '<h2 class="swal2-title">Scan Me</h2>' +
       '<img src=scan.png>' + 
-      '<h2 class="swal2-title">System</h2>' + 
+      '<h2 class="swal2-title">Browser</h2>' + 
       'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to browse.' +
       '<p>SMTT uses Google Web Speech API to do speech synthesis and recognition.' +
       '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a></p>',

@@ -32,6 +32,10 @@ button {
   white-space: nowrap;
 }
 
+textarea {
+  height: 3.9rem;
+}
+
 select {
   width: 90%;
 }
