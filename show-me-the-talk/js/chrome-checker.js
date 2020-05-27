@@ -66,7 +66,7 @@ function showEnv() {
   Swal.fire({
     title: '',
     html:
-      '<h2 class="swal2-title">Scan Me</h2>' +
+      '<h2 class="swal2-title">Web Address</h2>' +
       '<img src=scan.png>' + 
       '<h2 class="swal2-title">Browser</h2>' + 
       'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to browse.' +
@@ -82,7 +82,9 @@ function showGrp() {
     title: '',
     html:
       '<h2 class="swal2-title">Team</h2>' +
-      'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe',
+      'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe<br><br>' +
+      '<h2 class="swal2-title">Support</h2>' +
+      'If you need support or have any questions, feel free to contact us.',
     showCloseButton: false,
     showConfirmButton: false,
   })
