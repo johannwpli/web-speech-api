@@ -28,7 +28,6 @@ function populateVoiceList() {
     option.setAttribute('data-name', voices[i].name);
 
     if(voices[i].lang === 'en-US') {
-      option.setAttribute('value', 'en-US'); // Johann
       option.setAttribute('id', 'en-US'); // Johann
     }
 
