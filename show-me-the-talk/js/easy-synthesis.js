@@ -1,13 +1,13 @@
 var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('#text'); // Johann
-var voiceSelect = document.querySelector('select');
+var inputForm   = document.querySelector('form'        );
+var inputTxt    = document.querySelector('#text'       ); // Johann
+var voiceSelect = document.querySelector('select'      );
 
-var pitch = document.querySelector('#pitch');
-var pitchValue = document.querySelector('.pitch-value');
-var rate = document.querySelector('#rate');
-var rateValue = document.querySelector('.rate-value');
+var pitch       = document.querySelector('#pitch'      );
+var pitchValue  = document.querySelector('.pitch-value');
+var rate        = document.querySelector('#rate'       );
+var rateValue   = document.querySelector('.rate-value' );
 
 var voices = [];
 
@@ -24,16 +24,11 @@ function populateVoiceList() {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
     
-    /* don't know for what
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
-    }
-    */
-
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);
 
     if(voices[i].lang === 'en-US') {
+      option.setAttribute('value', 'en-US'); // Johann
       option.setAttribute('id', 'en-US'); // Johann
     }
 
@@ -50,6 +45,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 function speak(){
     if (document.querySelector('select').value === '0') {
+      document.querySelector('#lng').value = 'en-US'; // Johann
       document.querySelector('#en-US').selected = true; // Johann
     }
 
