@@ -45,7 +45,6 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 function speak(){
     if (document.querySelector('select').value === '0') {
-      document.querySelector('#lng').value = 'en-US'; // Johann
       document.querySelector('#en-US').selected = true; // Johann
     }
 
