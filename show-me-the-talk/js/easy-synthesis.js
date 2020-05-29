@@ -20,7 +20,7 @@ function populateVoiceList() {
       else return +1;
   });
   var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '<option value="0" disabled="true">pick a language</option>'; // Johann
+  voiceSelect.innerHTML = '<option value="none" disabled="true">pick a language</option>'; // Johann
   for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
@@ -30,6 +30,7 @@ function populateVoiceList() {
 
     if(voices[i].lang === 'en-US') {
       option.setAttribute('id', 'en-US'); // Johann
+      option.setAttribute('value', 'en-US'); // Johann
     }
 
     voiceSelect.appendChild(option);
@@ -44,9 +45,15 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 }
 
 function speak(){
-    if (document.querySelector('select').value === '0') {
+    /*
+    if (document.querySelector('select').value === 'none') {
       document.querySelector('#en-US').selected = true; // Johann
     }
+    */
+    if (voiceSelect.value === 'none') {
+      voiceSelect.value = 'en-US'; // Johann
+    }
+
 
     if (synth.speaking) {
         console.error('speechSynthesis.speaking');
