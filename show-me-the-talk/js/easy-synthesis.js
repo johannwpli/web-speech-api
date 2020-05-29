@@ -85,6 +85,7 @@ inputForm.onsubmit = function(event) {
 */
 
 inputPlay.onclick = function(event) {
+  event.preventDefault();
   speak();
   inputTxt.blur();
 }
