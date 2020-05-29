@@ -1,13 +1,14 @@
 var synth = window.speechSynthesis;
 
-var inputForm   = document.querySelector('form'        );
-var inputTxt    = document.querySelector('#text'       ); // Johann
-var voiceSelect = document.querySelector('select'      );
+let inputForm   = document.querySelector('form'        ),
+    inputPlay   = document.querySelector('#play'       ), // Johann
+    inputTxt    = document.querySelector('#text'       ), // Johann
+    voiceSelect = document.querySelector('select'      ),
 
-var pitch       = document.querySelector('#pitch'      );
-var pitchValue  = document.querySelector('.pitch-value');
-var rate        = document.querySelector('#rate'       );
-var rateValue   = document.querySelector('.rate-value' );
+    pitch       = document.querySelector('#pitch'      ),
+    pitchValue  = document.querySelector('.pitch-value'),
+    rate        = document.querySelector('#rate'       ),
+    rateValue   = document.querySelector('.rate-value' );
 
 var voices = [];
 
@@ -73,11 +74,18 @@ function speak(){
   }
 }
 
+/*
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
   speak();
 
+  inputTxt.blur();
+}
+*/
+
+inputPlay.onclick = function(event) {
+  speak();
   inputTxt.blur();
 }
 
