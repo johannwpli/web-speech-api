@@ -45,13 +45,9 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 }
 
 function speak(){
-    /*
-    if (document.querySelector('select').value === 'none') {
-      document.querySelector('#en-US').selected = true; // Johann
-    }
-    */
     if (voiceSelect.value === 'none') {
-      voiceSelect.value = 'en-US'; // Johann
+      // voiceSelect.value = 'en-US'; // not work on mobile, Johann
+      document.querySelector('#en-US').selected = true; // Johann
     }
 
 
