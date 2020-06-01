@@ -1,5 +1,10 @@
 var synth = window.speechSynthesis;
 
+var readySyn = 'not ready';
+if (synth) {
+  readySyn = 'ready';
+}
+
 let inputForm   = document.querySelector('form'        ),
     inputPlay   = document.querySelector('#play'       ), // Johann
     inputTxt    = document.querySelector('#text'       ), // Johann

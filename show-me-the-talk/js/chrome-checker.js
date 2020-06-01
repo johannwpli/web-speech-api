@@ -47,7 +47,7 @@ function showHlp() {
   Swal.fire({
     title: 'How to Play',
     //icon: 'question',
-    html: 'Type 1<br>①  Click \'New test\' to get test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.<br><br>Type 2<br>①  Input text in the form to set test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.',
+    html: 'Type A<br>①  Click \'New test\' to get test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.<br><br>Type B<br>①  Input text in the form to set test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.',
     showConfirmButton: false,
   })
 }
@@ -66,12 +66,11 @@ function showEnv() {
   Swal.fire({
     title: '',
     html:
-      '<h2 class="swal2-title">Web Address</h2>' +
+      '<h2 class="swal2-title">Web</h2>' +
       '<img src=scan.png>' + 
       '<h2 class="swal2-title">Browser</h2>' + 
-      'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to browse.' +
-      '<p>SMTT uses Google Web Speech API to do speech synthesis and recognition.' +
-      '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a></p>',
+      'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to play.' +
+      '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a>',
     showCloseButton: false,
     showConfirmButton: false,
   })
@@ -81,6 +80,9 @@ function showGrp() {
   Swal.fire({
     title: '',
     html:
+      '<h2 class="swal2-title">API</h2>' + 
+      'SMTT uses Google Web Speech API to do speech synthesis and recognition.<br><br>' +
+      'Status check:<br>Speech synthesis is ' + readySyn + '.<br>Speech recognition is ' + readyRec +'.<br><br>' +
       '<h2 class="swal2-title">Team</h2>' +
       'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe<br><br>' +
       '<h2 class="swal2-title">Support</h2>' +
