@@ -46,7 +46,7 @@ form > div {
   width: 81%;
 }
 
-label {
+.label {
   float: left;
   width: 10%;
   line-height: 1.5;
