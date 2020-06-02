@@ -1,3 +1,6 @@
+let readySyn = (window.speechSynthesis !== undefined) ? 'READY' : 'NOT READY',
+    readyRec = (SpeechRecognition !== undefined && webkitSpeechRecognition !== undefined) ? 'READY' : 'NOT READY';
+
 /*
 Author: Jonathan Marzullo
 Title:  html - JavaScript: How to find out if the user browser is Chrome? - Stack Overflow
@@ -38,10 +41,10 @@ if (isIOSChrome) {
 
 /* icon to show info, Johann */
 
-var hlpIcn = document.querySelector('#hlp');
-var infIcn = document.querySelector('#inf');
-var envIcn = document.querySelector('#env');
-var grpIcn = document.querySelector('#grp');
+let hlpIcn = document.querySelector('#hlp'),
+    infIcn = document.querySelector('#inf'),
+    envIcn = document.querySelector('#env'),
+    grpIcn = document.querySelector('#grp');
 
 function showHlp() {
   Swal.fire({
@@ -66,11 +69,13 @@ function showEnv() {
   Swal.fire({
     title: '',
     html:
-      '<h2 class="swal2-title">Web</h2>' +
-      '<img src=scan.png>' + 
       '<h2 class="swal2-title">Browser</h2>' + 
-      'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to play.' +
-      '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a>',
+      'Please use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> to play.<br>' +
+      '<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility" target="_blank">(Learn More)</a><br><br>' +
+      '<h2 class="swal2-title">Readiness</h2>' +
+      'Speech synthesis is ' + readySyn + '.<br>Speech recognition is ' + readyRec +'.<br><br>' +
+      '<h2 class="swal2-title">Web</h2>' +
+      '<img src=scan.png>',
     showCloseButton: false,
     showConfirmButton: false,
   })
@@ -82,7 +87,6 @@ function showGrp() {
     html:
       '<h2 class="swal2-title">API</h2>' + 
       'SMTT uses Google Web Speech API to do speech synthesis and recognition.<br><br>' +
-      'Status check:<br>Speech synthesis is ' + readySyn + '.<br>Speech recognition is ' + readyRec +'.<br><br>' +
       '<h2 class="swal2-title">Team</h2>' +
       'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe<br><br>' +
       '<h2 class="swal2-title">Support</h2>' +

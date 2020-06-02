@@ -2,9 +2,6 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
-var readyRec = 'not ready';
-if (!!SpeechRecognitionEvent) { readyRec = 'ready'; }
-
 var stage;
 var phrases = [
   'People who have been exposed to the new coronavirus might practice self-quarantine',
