@@ -158,6 +158,13 @@ function testSpeechGet() {
         }) // show congrats video, Johann
       }
 
+      if (heartCount === 15) {
+        Swal.fire({
+          html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/GXFSK0ogeg4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+          showConfirmButton: false,
+        }) // show congrats video, Johann
+      }
+
     } else {
       resultPara.textContent = 'That didn\'t sound right.';
       resultPara.style.background = 'red';
