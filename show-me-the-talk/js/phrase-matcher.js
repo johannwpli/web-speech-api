@@ -2,57 +2,71 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
-var stage;
-var phrases = [
-  'People who have been exposed to the new coronavirus might practice self-quarantine',
-  'This brand-new virus can be transmitted between humans through droplets and contact',
-  'Canceling events that are likely to draw crowds is an example of social distancing',
-  'People who contract the coronavirus might spread the disease before symptoms',
-  'We could take precautions to prevent infection, such as washing hands regularly',
-  'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world',
-  'The virus has a long incubation period',
-  'Thousands of people in Spain are protesting against the government’s handling of the coronavirus outbreak',
-  'The country’s two-month lockdown has seen hotels, bars and restaurants all close as well as beaches and other outdoor attractions',
-  'Church officials followed social distancing rules and disinfected the building ahead of the service'
-];
-var radios = document.getElementsByName("stage");
+let stage;
+let phrase; // Johann
+let phrases = [
+  'Please use the hand soap to wash your hands',
+  'I hope every patient here could stay calm. We will spare our efforts to help everyone here',
+  'This TV show is about a virus and a patient',
+  'It’s yellow. Could you help me buy yellow masks',
+  'If you need other help, do not hesitate to ask our nurses',
+  'If you get sick, you should stay home and stay away from other people',
+  'Doctors must wear masks to protect themselves',
+  'Each person can get 9 masks every two weeks',
+  'The symptoms of the virus include sore throat, fever, and cough',
+  'No one can leave their house except to buy food or get medical care',
+  'Hello! I am a new doctor here, but I am not an intern',
+  'If you need water, you can use the water dispenser beside the toilet',
+  'Keep others distance, or you will catch the virus'
+]; // 13 phrases
+
+let radios = document.getElementsByName("stage");
+
 for(radio in radios) {
   radios[radio].onclick = function() {
     stage = this.value
     //console.log(stage);
 
     if (stage === 'A') {
-      /*
       phrases = [
-      ];
-      */
+        'It’s a mask',
+        'He is her doctor',
+        'Keep the distance',
+        'I’m illed',
+        'I get the high fever',
+        'Is this a lineup for masks',
+        'Those patients are angry',
+        'I recover',
+        'That is an isolation',
+        'These are vaccines',
+        'They are infected',
+        'That is a pharmacy',
+        'The nurse is young',
+        'It is a pill',
+        'I don’t feel well',
+        'I have a headache',
+        'I need to take some medicine',
+        'My temperature is 38 degrees'
+      ]; // 18 phrases
     }
 
     if (stage === 'C') {
-      /*
       phrases = [
-      ];
-      */
+        'People who have been exposed to the new coronavirus might practice self-quarantine',
+        'This brand-new virus can be transmitted between humans through droplets and contact',
+        'Canceling events that are likely to draw crowds is an example of social distancing',
+        'People who contract the coronavirus might spread the disease before symptoms',
+        'We could take precautions to prevent infection, such as washing hands regularly',
+        'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world',
+        'The virus has a long incubation period',
+        'Thousands of people in Spain are protesting against the government’s handling of the coronavirus outbreak',
+        'The country’s two-month lockdown has seen hotels, bars, and restaurants all close as well as beaches and other outdoor attractions',
+        'Church officials followed social distancing rules and disinfected the building ahead of the service'
+      ]; // 10 phrases
     }
 
   }
 }
-
-let phrase; // Johann
-/*
-let phrases = [
-  'People who have been exposed to the new coronavirus might practice self-quarantine',
-  'This brand-new virus can be transmitted between humans through droplets and contact',
-  'Canceling events that are likely to draw crowds is an example of social distancing',
-  'People who contract the coronavirus might spread the disease before symptoms',
-  'We could take precautions to prevent infection, such as washing hands regularly',
-  'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world',
-  'The virus has a long incubation period',
-  'Thousands of people in Spain are protesting against the government’s handling of the coronavirus outbreak',
-  'The country’s two-month lockdown has seen hotels, bars and restaurants all close as well as beaches and other outdoor attractions',
-  'Church officials followed social distancing rules and disinfected the building ahead of the service'
-];
-*/
 
 let phrasePara = document.querySelector('.phrase'),
     resultPara = document.querySelector('.result'),
@@ -129,14 +143,17 @@ function testSpeechGet() {
 
       heartPara.innerHTML += '❤️'; // Johann
       heartCount ++; // Johann
-      swordPara.innerHTML += '🗡️'; // Johann
-      swordCount ++; // Johann
-      armorPara.innerHTML += '🛡️'; // Johann
-      armorCount ++; // Johann
 
-      if (heartCount === 6) {
+      if (heartCount === 5) {
         Swal.fire({
           html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/-4lsg71fquo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+          showConfirmButton: false,
+        }) // show congrats video, Johann
+      }
+
+      if (heartCount === 10) {
+        Swal.fire({
+          html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/CSav51fVlKU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
           showConfirmButton: false,
         }) // show congrats video, Johann
       }
