@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html {
   text-align: center;
 }
@@ -30,8 +37,10 @@ button {
   line-height: 2;
   border-radius: 1.3rem;
   white-space: nowrap;
-  animation: fadeInRight;
-  animation-duration: 1s;
+  -webkit-animation: fadeInRight;
+          animation: fadeInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 textarea {
@@ -53,10 +62,17 @@ form > div {
 }
 
 a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media all and (max-height: 410px) {
@@ -71,12 +87,15 @@ a {
 
 .card {
   background: rgba(255, 255, 255, .7);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 .card:hover {
   background: rgba(255, 255, 255, .8);
-  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
+          box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
 }
 
 .card-header a, .card-footer a {
@@ -85,14 +104,21 @@ a {
 
 .card-title {
   display: inline-block;
-  animation: tada;
-  animation-delay: .5s;
-  animation-duration: 1s;
+  -webkit-animation: tada;
+          animation: tada;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .phrase {
@@ -118,10 +144,6 @@ a {
 
 .txt:focus {
   outline: 1px solid #c9f3ef;
-}
-
-.materialize-textarea {
-  /* height: auto !important; */
 }
 
 .clearfix {
