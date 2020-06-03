@@ -144,21 +144,21 @@ function testSpeechGet() {
       heartPara.innerHTML += '❤️'; // Johann
       heartCount ++; // Johann
 
-      if (heartCount === 5) {
+      if (heartCount === Math.round(phrases.length / 3)) {
         Swal.fire({
           html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/-4lsg71fquo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
           showConfirmButton: false,
         }) // show congrats video, Johann
       }
 
-      if (heartCount === 10) {
+      if (heartCount === Math.round(phrases.length * 2 / 3)) {
         Swal.fire({
           html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/CSav51fVlKU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
           showConfirmButton: false,
         }) // show congrats video, Johann
       }
 
-      if (heartCount === 15) {
+      if (heartCount === phrases.length) {
         Swal.fire({
           html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/GXFSK0ogeg4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
           showConfirmButton: false,
