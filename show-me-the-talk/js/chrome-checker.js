@@ -1,5 +1,5 @@
-let readySyn = (window.speechSynthesis !== undefined) ? 'READY' : 'NOT READY',
-    readyRec = (SpeechRecognition !== undefined && webkitSpeechRecognition !== undefined) ? 'READY' : 'NOT READY';
+let readySyn = (window.speechSynthesis !== undefined) ? 'READY✔️' : 'NOT READY❌',
+    readyRec = (SpeechRecognition !== undefined && webkitSpeechRecognition !== undefined) ? 'READY✔️' : 'NOT READY❌';
 
 /*
 Author: Jonathan Marzullo
