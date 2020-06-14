@@ -90,10 +90,12 @@ function showGrp() {
     html:
       '<h2 class="swal2-title">API</h2>' + 
       'SMTT uses Google Web Speech API to do speech synthesis and recognition.<br><br>' +
+      '<h2 class="swal2-title">Feedback</h2>' +
+      'Fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLNwECXdLieEhI389OXgaAeAKYgPJdfV18YvlLNqDlKaCvSQ/viewform" target=_blank>questionnaire</a> to help improve our system.<br><br>' +
       '<h2 class="swal2-title">Team</h2>' +
-      'Briefing: Buck & Shelly<br>Content: Jason & Juanito<br>Game & Program: <a href="https://paint1024.github.io/" target="_blank">Johann</a><br>Schedule: Kobe<br><br>' +
-      '<h2 class="swal2-title">Support</h2>' +
-      'If you need support or have any questions, feel free to contact us.',
+      'Project Management: Buck, Kobe & Shelly<br>Textbook Editing: Jason & Juanito<br>Gaming & Programming: <a href="https://paint1024.github.io/" target="_blank">Johann</a>',
+      //'<h2 class="swal2-title">Support</h2>' +
+      //'If you need support or have any questions, feel free to contact us.',
     showCloseButton: false,
     showConfirmButton: false,
   })
