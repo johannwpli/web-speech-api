@@ -93,7 +93,7 @@ function showGrp() {
       '<h2 class="swal2-title">Feedback</h2>' +
       'Fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLNwECXdLieEhI389OXgaAeAKYgPJdfV18YvlLNqDlKaCvSQ/viewform" target=_blank>questionnaire</a> to help improve our system.<br><br>' +
       '<h2 class="swal2-title">Team</h2>' +
-      'Project Management: Buck, Kobe & Shelly<br>Textbook Editing: Jason & Juanito<br>Gaming & Programming: <a href="https://paint1024.github.io/" target="_blank">Johann</a>',
+      'Project Managing: Buck, Kobe & Shelly<br>Material Editing: Jason & Juanito<br>Game & Program Designing: <a href="https://paint1024.github.io/" target="_blank">Johann</a>',
       //'<h2 class="swal2-title">Support</h2>' +
       //'If you need support or have any questions, feel free to contact us.',
     showCloseButton: false,
