@@ -146,23 +146,29 @@ function testSpeechGet() {
 
       if (heartCount === Math.round(phrases.length / 3)) {
         Swal.fire({
-          html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/-4lsg71fquo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+          html:
+            '<h2 class="swal2-title">Good Job!</h2>' +
+            '<div class="video-container"><iframe src="https://www.youtube.com/embed/-4lsg71fquo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
           showConfirmButton: false,
-        }) // show congrats video, Johann
+        }) // show phase 1 congrats video, Johann
       }
 
       if (heartCount === Math.round(phrases.length * 2 / 3)) {
         Swal.fire({
-          html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/CSav51fVlKU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+          html:
+            '<h2 class="swal2-title">Way to Go!</h2>' +
+            '<div class="video-container"><iframe src="https://www.youtube.com/embed/CSav51fVlKU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
           showConfirmButton: false,
-        }) // show congrats video, Johann
+        }) // show phase 2 congrats video, Johann
       }
 
       if (heartCount === phrases.length) {
         Swal.fire({
-          html: '<div class="video-container"><iframe src="https://www.youtube.com/embed/GXFSK0ogeg4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+          html:
+            '<h2 class="swal2-title">Congrats!</h2>' +
+            '<div class="video-container"><iframe src="https://www.youtube.com/embed/GXFSK0ogeg4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
           showConfirmButton: false,
-        }) // show congrats video, Johann
+        }) // show phase 3 congrats video, Johann
       }
 
     } else {
