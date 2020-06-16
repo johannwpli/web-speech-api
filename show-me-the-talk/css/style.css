@@ -35,6 +35,7 @@ div p {
 button {
   font-size: 1.1rem;
   line-height: 2;
+  border: 1px solid #ffab40;
   border-radius: 1.3rem;
   white-space: nowrap;
   -webkit-animation: fadeInRight;
