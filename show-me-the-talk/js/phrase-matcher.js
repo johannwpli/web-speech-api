@@ -6,19 +6,20 @@ let stage;
 let phrase; // Johann
 let phrases = [
   'Please use the hand soap to wash your hands',
-  'I hope every patient here could stay calm. We will spare our efforts to help everyone here',
+  'I hope every patient here could stay calm',
+  'We will spare our efforts to help everyone here',
   'This TV show is about a virus and a patient',
-  'It is yellow. Could you help me buy yellow masks',
-  'If you need other help, do not hesitate to ask our nurses',
-  'If you get sick, you should stay home and stay away from other people',
+  'Could you help me buy yellow masks',
+  'Do not hesitate to ask our nurses if you need other help',
+  'You should stay home and stay away from other people',
   'Doctors must wear masks to protect themselves',
   'Each person can get 9 masks every two weeks',
   'The symptoms of the virus include sore throat, fever, and cough',
   'No one can leave their house except to buy food or get medical care',
   'Hello! I am a new doctor here, but I am not an intern',
-  'If you need water, you can use the water dispenser beside the toilet',
-  'Keep others distance, or you will catch the virus'
-]; // 13 phrases
+  'You can use the water dispenser beside the toilet',
+  'Keep others distance in order not to catch the virus'
+]; // 14 phrases
 
 let radios = document.getElementsByName("stage");
 
@@ -59,9 +60,7 @@ for(radio in radios) {
         'We could take precautions to prevent infection, such as washing hands regularly',
         'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world',
         'The virus has a long incubation period',
-        //'Thousands of people in Spain are protesting against the government’s handling of the coronavirus outbreak',
         'Thousands of people in Spain are protesting against the handling of the coronavirus outbreak',
-        //'The country’s two-month lockdown has seen hotels, bars, and restaurants all close as well as beaches and other outdoor attractions',
         'The two-month lockdown has seen hotels, bars, and restaurants all close as well as beaches and other outdoor attractions',
         'Church officials followed social distancing rules and disinfected the building ahead of the service'
       ]; // 10 phrases
