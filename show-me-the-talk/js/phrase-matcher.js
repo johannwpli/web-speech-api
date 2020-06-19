@@ -8,7 +8,7 @@ let phrases = [
   'Please use the hand soap to wash your hands',
   'I hope every patient here could stay calm. We will spare our efforts to help everyone here',
   'This TV show is about a virus and a patient',
-  'It’s yellow. Could you help me buy yellow masks',
+  'It is yellow. Could you help me buy yellow masks',
   'If you need other help, do not hesitate to ask our nurses',
   'If you get sick, you should stay home and stay away from other people',
   'Doctors must wear masks to protect themselves',
@@ -29,10 +29,10 @@ for(radio in radios) {
 
     if (stage === 'A') {
       phrases = [
-        'It’s a mask',
+        'It is a mask',
         'He is her doctor',
         'Keep the distance',
-        'I’m illed',
+        'I am illed',
         'I get the high fever',
         'Is this a lineup for masks',
         'Those patients are angry',
@@ -43,7 +43,7 @@ for(radio in radios) {
         'That is a pharmacy',
         'The nurse is young',
         'It is a pill',
-        'I don’t feel well',
+        'I do not feel well',
         'I have a headache',
         'I need to take some medicine',
         'My temperature is 38 degrees'
@@ -59,8 +59,10 @@ for(radio in radios) {
         'We could take precautions to prevent infection, such as washing hands regularly',
         'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world',
         'The virus has a long incubation period',
-        'Thousands of people in Spain are protesting against the government’s handling of the coronavirus outbreak',
-        'The country’s two-month lockdown has seen hotels, bars, and restaurants all close as well as beaches and other outdoor attractions',
+        //'Thousands of people in Spain are protesting against the government’s handling of the coronavirus outbreak',
+        'Thousands of people in Spain are protesting against the handling of the coronavirus outbreak',
+        //'The country’s two-month lockdown has seen hotels, bars, and restaurants all close as well as beaches and other outdoor attractions',
+        'The two-month lockdown has seen hotels, bars, and restaurants all close as well as beaches and other outdoor attractions',
         'Church officials followed social distancing rules and disinfected the building ahead of the service'
       ]; // 10 phrases
     }

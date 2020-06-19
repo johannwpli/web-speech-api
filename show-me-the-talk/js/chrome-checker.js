@@ -48,19 +48,24 @@ let hlpIcn = document.querySelector('#hlp'),
 
 function showHlp() {
   Swal.fire({
-    title: 'How to Play',
+    title: '',
     //icon: 'question',
-    html: 'Type A<br>①  Click \'New test\' to get test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.<br><br>Type B<br>①  Input text in the form to set test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.',
+    html:
+      '<h2 class="swal2-title">How to Play</h2>' + 
+      'Type A<br>①  Click \'New test\' to get test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.<br><br>Type B<br>①  Input text in the form to set test.<br>②  Click \'Play sound\' to listen.<br>③  Click \'Recognize voice\' to speak.',
     showConfirmButton: false,
   })
 }
 
 function showInf() {
   Swal.fire({
-    title: 'Under the Hood',
+    title: '',
     //icon: 'info',
     html:
-      'The Shadowing / Echo Method<br><br>' +
+      '<h2 class="swal2-title">Origin</h2>' + 
+      'Please read the <a href="https://github.com/paint1024/web-speech-api/tree/master/show-me-the-talk#readme" target="_blank">README</a> to know more.<br><br>' +
+      '<h2 class="swal2-title">Under the Hood</h2>' + 
+      //'The Shadowing / Echo Method<br><br>' +
       'Before continuing, I highly recommend spending 19 mins first to watch this video.<br><br>' +
       '<div class="video-container"><iframe src="https://www.youtube.com/embed/sQEWEPIHLzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
     showConfirmButton: false,
