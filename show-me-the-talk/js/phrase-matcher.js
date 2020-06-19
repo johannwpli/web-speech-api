@@ -16,10 +16,9 @@ let phrases = [
   'Each person can get 9 masks every two weeks',
   'The symptoms of the virus include sore throat, fever, and cough',
   'No one can leave their house except to buy food or get medical care',
-  'Hello! I am a new doctor here, but I am not an intern',
   'You can use the water dispenser beside the toilet',
   'Keep others distance in order not to catch the virus'
-]; // 14 phrases
+]; // 13 phrases
 
 let radios = document.getElementsByName("stage");
 
@@ -42,26 +41,25 @@ for(radio in radios) {
         'These are vaccines',
         'They are infected',
         'That is a pharmacy',
-        'The nurse is young',
         'It is a pill',
         'I do not feel well',
         'I have a headache',
         'I need to take some medicine',
         'My temperature is 38 degrees'
-      ]; // 18 phrases
+      ]; // 17 phrases
     }
 
     if (stage === 'C') {
       phrases = [
-        'People who have been exposed to the new coronavirus might practice self-quarantine',
-        'This brand-new virus can be transmitted between humans through droplets and contact',
+        'People who have been exposed to the new coronavirus might practice quarantine by themselves',
+        'This brand new virus can be transmitted between humans through droplets and contact',
         'Canceling events that are likely to draw crowds is an example of social distancing',
         'People who contract the coronavirus might spread the disease before symptoms',
         'We could take precautions to prevent infection, such as washing hands regularly',
-        'The World Health Organization declares the COVID-19 outbreak a pandemic as it ravages the world',
+        'The World Health Organization declares the COVID 19 outbreak a pandemic as it ravages the world',
         'The virus has a long incubation period',
-        'Thousands of people in Spain are protesting against the handling of the coronavirus outbreak',
-        'The two-month lockdown has seen hotels, bars, and restaurants all close as well as beaches and other outdoor attractions',
+        'Thousands of people are protesting against the handling of the coronavirus outbreak',
+        'The lockdown has seen hotels and restaurants all close as well as beaches and other outdoor attractions',
         'Church officials followed social distancing rules and disinfected the building ahead of the service'
       ]; // 10 phrases
     }
