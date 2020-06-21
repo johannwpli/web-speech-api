@@ -94,7 +94,7 @@ function showGrp() {
     title: '',
     html:
       '<h2 class="swal2-title">API</h2>' + 
-      'SMTT uses Google Web Speech API to do speech synthesis and recognition.<br><br>' +
+      'SMTT uses <a href="https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API" target="_blank">Google Web Speech API</a> to do speech synthesis and recognition.<br><br>' +
       '<h2 class="swal2-title">Feedback</h2>' +
       'Fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLNwECXdLieEhI389OXgaAeAKYgPJdfV18YvlLNqDlKaCvSQ/viewform" target=_blank>questionnaire</a> to help improve our system.<br><br>' +
       '<h2 class="swal2-title">Team</h2>' +
