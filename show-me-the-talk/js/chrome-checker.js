@@ -66,7 +66,7 @@ function showInf() {
       'Please read the <a href="https://github.com/paint1024/web-speech-api/tree/master/show-me-the-talk/README.md" target="_blank">README</a> to know more.<br><br>' +
       '<h2 class="swal2-title">Under the Hood</h2>' + 
       //'The Shadowing / Echo Method<br><br>' +
-      'Before continuing, I highly recommend spending 19 mins first to watch this video.<br><br>' +
+      'Before continuing, we highly recommend spending 19 mins first to watch this video.<br><br>' +
       '<div class="video-container"><iframe src="https://www.youtube.com/embed/sQEWEPIHLzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
     showConfirmButton: false,
     //timer: 3000,
