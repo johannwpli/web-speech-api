@@ -100,12 +100,21 @@ a {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  border-radius: 20px;
 }
 
 .card:hover {
   background: rgba(255, 255, 255, .8);
   -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
           box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, .3);
+}
+
+.card-header {
+  border-radius: 20px 20px 0 0;
+}
+
+.card-footer {
+  border-radius: 0 0 20px 20px !important;
 }
 
 .card-header a, .card-footer a {
