@@ -1,5 +1,5 @@
 ## Show me the talk
-[Run SMTT demo live](https://johannli.github.io/web-speech-api/show-me-the-talk/)
+[Run SMTT demo live](https://paint1024.github.io/web-speech-api/show-me-the-talk/)
 
 Linux 的作者 Linus Torvalds 曾經說過「Talk is cheap. Show me the code.」，對於每一位程式開發人員而言，都是一個警醒與督促，然而對於語言學習者來說，「Show me the talk.」更是至關緊要。
 
