@@ -179,6 +179,11 @@ a {
   content: "🔗";
 }
 
+#scan {
+  width: 250px;
+  height: 250px;
+}
+
 #rate, #pitch {
   float: right;
   width: 77%;
