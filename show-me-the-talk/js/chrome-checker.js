@@ -83,7 +83,7 @@ function showEnv() {
       '<h2 class="swal2-title">Readiness</h2>' +
       'Speech synthesis is ' + readySyn + '.<br>Speech recognition is ' + readyRec +'.<br><br>' +
       '<h2 class="swal2-title">Web</h2>' +
-      '<img src=scan.png>',
+      '<img id=scan src=scan.png>',
     showCloseButton: false,
     showConfirmButton: false,
   })
